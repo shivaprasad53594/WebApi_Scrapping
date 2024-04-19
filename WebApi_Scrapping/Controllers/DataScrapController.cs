@@ -10,10 +10,10 @@ namespace WebApi_Scrapping.Controllers
     public class DataScrapController : ControllerBase
     {
         [HttpGet]
-        public IActionResult ScrapeData(string? url)
+        public IActionResult ScrapeData(string url)
         {
             //var bookLinks = GetBookLinks("http://books.toscrape.com/catalogue/category/books/mystery_3/index.html");
-            var bookLinks = GetBookLinks(url);
+             var bookLinks = GetBookLinks(url);
             List<Book> books = GetBookDetails(bookLinks);
 
             if (books != null)
